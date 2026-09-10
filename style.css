@@ -1,1 +1,429 @@
+/* =========================
+   RESET
+========================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f3ef;
+    color: #151515;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    width: 100%;
+    padding: 28px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d8d5cf;
+    background: #f5f3ef;
+}
+
+.logo {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 88vh;
+    padding: 8% 6%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 1000px;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 120px);
+    line-height: 0.95;
+    font-weight: 500;
+    letter-spacing: -5px;
+    max-width: 1000px;
+}
+
+.hero h1 span {
+    display: block;
+    font-style: italic;
+}
+
+.hero-text {
+    max-width: 480px;
+    margin-top: 35px;
+    font-size: 17px;
+    color: #555;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 28px;
+    border: 1px solid #151515;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #151515;
+    color: #fff;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 10% 6%;
+    border-top: 1px solid #d8d5cf;
+}
+
+.about h2 {
+    max-width: 1000px;
+    font-size: clamp(35px, 5vw, 70px);
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+.about-text {
+    max-width: 600px;
+    margin-top: 45px;
+    font-size: 17px;
+    color: #555;
+}
+
+
+/* =========================
+   WORK
+========================= */
+
+.work {
+    padding: 10% 6%;
+    border-top: 1px solid #d8d5cf;
+}
+
+.section-heading {
+    margin-bottom: 100px;
+}
+
+.section-heading h2 {
+    font-size: clamp(45px, 7vw, 90px);
+    font-weight: 400;
+    letter-spacing: -4px;
+}
+
+
+/* =========================
+   PROJECT
+========================= */
+
+.project {
+    margin-bottom: 160px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.project-number {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.project h3 {
+    font-size: clamp(30px, 4vw, 55px);
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+.project-type {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #777;
+    text-align: right;
+}
+
+.project-description {
+    max-width: 600px;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   PROJECT GALLERY
+========================= */
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background: #e9e6df;
+    transition: transform 0.4s ease;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.015);
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    padding: 10% 6%;
+    border-top: 1px solid #d8d5cf;
+}
+
+.skills h2 {
+    font-size: clamp(45px, 7vw, 90px);
+    font-weight: 400;
+    letter-spacing: -4px;
+    margin-bottom: 70px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #aaa;
+}
+
+.skills-grid div {
+    padding: 25px 0;
+    border-bottom: 1px solid #aaa;
+    font-size: 18px;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience {
+    padding: 10% 6%;
+    border-top: 1px solid #d8d5cf;
+}
+
+.experience h2 {
+    font-size: clamp(40px, 6vw, 75px);
+    font-weight: 400;
+    letter-spacing: -3px;
+    margin-bottom: 70px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.experience-item {
+    border-top: 1px solid #aaa;
+    padding-top: 25px;
+}
+
+.experience-item h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.experience-item p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 15% 6%;
+    border-top: 1px solid #d8d5cf;
+}
+
+.contact h2 {
+    max-width: 900px;
+    font-size: clamp(50px, 8vw, 110px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -5px;
+}
+
+.contact h2 span {
+    font-style: italic;
+}
+
+.contact > p:not(.section-label) {
+    margin-top: 30px;
+    color: #666;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 6%;
+    border-top: 1px solid #d8d5cf;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 22px 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 15% 5%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        letter-spacing: -3px;
+    }
+
+    .about,
+    .work,
+    .skills,
+    .experience,
+    .contact {
+        padding: 18% 5%;
+    }
+
+    .section-heading {
+        margin-bottom: 60px;
+    }
+
+    .project {
+        margin-bottom: 100px;
+    }
+
+    .project-header {
+        display: block;
+    }
+
+    .project-type {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    footer {
+        padding: 25px 5%;
+        display: block;
+    }
+
+    .footer-links {
+        margin-top: 15px;
+    }
+}
